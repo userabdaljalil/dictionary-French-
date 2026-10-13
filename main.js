@@ -14,5 +14,5 @@ async function getGeminiResponse(userPrompt) {
   });
   
   const data = await res.json();
-  return data.candidates[0].content.parts[0].text;
+  return await data.candidates[0].content.parts[0].text;
 }
